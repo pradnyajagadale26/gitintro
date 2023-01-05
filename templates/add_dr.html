@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<div class="col-md-8" style="margin-top: 10px; padding-left: 300px;">
+    <h3 class="bg bg-info text-dark text-center">Add Doctor</h3>
+   
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="dname" class="form-label">Name</label>
+            <input type="text" name="doctorName" class="form-control" id="dname" placeholder="Enter Your Name">
+        </div>
+        <div class="mb-3">
+            <label for="dcon" class="form-label">Contact</label>
+            <input type="number" name="contacts" class="form-control" id="dcon" placeholder="Enter Your Name">
+        </div>
+        <div class="mb-3">
+            <label for="dspecial" class="form-label">Special</label>
+            <input type="text" name="special" class="form-control" id="dspecial" placeholder="Enter Your Speciality">
+        </div>
+        <div class="mb-3">
+            <input type="submit" name="submit" value="Click">
+         </div>
+    </form>
+</div>   
+
+
+{% endblock 'main' %}

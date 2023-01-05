@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<div class="dash" style="padding-top:50px";>
+
+<table border="2px" cellspacing="100px" cellpadding="40px" align="center">
+    
+    <tr>
+        <th><a href="dadd"><img src="{% static 'images/dr.png' %}"height="350px" width="350px"></a></th>
+        <th><a href="#"><img src="{% static 'images/p.jpg' %}" height="350px" width="350px"></a></th>
+        <th><a href="#"><img src="{% static 'images/appointment.png' %}" height="350px" width="350px"></a></th>
+
+    </tr> 
+    <tr>
+        <td align="center"><h2><input type="submit" name="doctor" value="DOCTOR"> </h2></td>
+        <td align="center"><h2><input type="submit" name="patients" value="PATIENTS"></h2></td>
+        <td align="center"><h2><input type="submit" name="appointment" value="APPOINTMENT"></td>
+    </tr>
+</table>
+</div>
+{% endblock 'main' %}

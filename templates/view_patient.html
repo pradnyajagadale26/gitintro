@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<div>
+    <h3 class="bg bg-primary text-white text-center">View Doctor</h3>
+                        <table class="table table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">PATIENTID</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">GENDER</th>
+                            <th scope="col">MOBILE</th>
+                            <th scope="col">ADDRESS</th>
+                            <th scope="col">DELETE</th>
+                          </tr>
+                        </thead>
+
+                          {% for x in data %}
+                            <tr>
+                              <td>{{x.id}}</td>
+                              <td>{{x.name}}</td>
+                              <td>{{x.gender}}</td>
+                              <td>{{x.mobile}}</td>
+                              <td>{{x.address}}</td>
+                              <td><a href="remove/{{x.id}}"><button class="btn btn-danger">Delete</button></a></td>
+                            </tr>
+                          {% endfor %}
+
+                        </tbody>
+                      </table>
+        
+</div>
+
+{% endblock 'main' %}

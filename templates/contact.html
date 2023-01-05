@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<style>
+   .mydivstyle:hover{
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+        transform: translateY(-20px);
+   }
+</style>
+
+{% block 'main' %}
+
+
+
+<div class="container" style="margin-top:50px;">
+  <h1 class="text-center">Contact page</h1>
+    <div class="row mt-5 text-center">
+      <div class="col-lg-3 col-sm-6 mydivstyle">
+        <h4><i class="fas fa-phone-square">Contact</i>
+          <p class="text-danger font-weight-bold mt-3"><a href="tel:+97798700000">+97798700000</a></p>
+          </h4>
+      </div>
+      <div class="col-lg-3 col-sm-6 mydivstyle">
+        <h4><i class="fa fa-envelope">Send-email</i> 
+        <p class="font-weight-bold mt-3"><a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
+        </h4>
+         
+      </div>
+      <div class="col-lg-3 col-sm-6 mydivstyle">
+        <h4><i class="fa fa-address-card">Office Address</i> 
+        <p class="font-weight-bold mt-3"><a href="http://maps.google.com/maps?q=thana">Thane</a></p>
+        </h4>
+      </div>
+      <div class="col-lg-3 col-sm-6 mydivstyle">
+        <h4><i class="fa fa-address-card">Office Time</i> 
+        <p class="font-weight-bold mt-3">10 to 5 PM</p>
+      </h4>
+      </div>
+      
+    </div>
+  </div>
+
+
+{% endblock 'main' %}

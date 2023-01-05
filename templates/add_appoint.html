@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<div class="col-md-8" style="margin-top: 10px; padding-left: 300px;">
+    <h3 class="bg bg-info text-dark text-center">Add Appointment</h3>
+   
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="dname" class="form-label">Doctor Name</label>
+            <!-- <select name="doctor" class="form-control">
+                {% for x in doctor %}
+                <option value="{{ x.doctorName}}">{{x.doctorName}}</option>
+                {% endfor %}
+            </select>              -->
+                <input type="text" name="doctor" class="form-control" id="dname" placeholder="Enter Doctor Name"> 
+        </div>
+        <div class="mb-3">
+            <label for="pname" class="form-label">Patient Name</label>
+            <!--select name="Patient" class="form-control">
+                 {% for x in Patient %}
+                <option value="{{ x.name}}">{{x.name}}</option>
+                {% endfor %} -->
+            </select>
+            <input type="text" name="Patient" class="form-control" id="pname" placeholder="Enter Patient Name">
+        </div>
+        <div class="mb-3">
+            <label for="dt" class="form-label">Date</label>
+            <input type="DATE" name="Date" class="form-control" id="dt">
+        </div>
+        <div class="mb-3">
+            <label for="times" class="form-label">Time</label>
+            <input type="time" name="Time" class="form-control" id="times">
+        </div>
+        <div class="mb-3">
+            <input type="submit" name="submit" value="Click">
+         </div>
+    </form>
+</div>   
+
+
+{% endblock 'main' %}
